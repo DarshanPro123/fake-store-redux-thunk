@@ -10,52 +10,14 @@ import MyCards from "../src/components/MyCards/MyCards.jsx";
 import myimg from "../src/assets/love-happy.gif";
 import Userinfo from "./components/Userinfo.jsx";
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 const App = () => {
   return (
     <Router>
       <div>
-        <nav className="bg-gray-200 h-16 flex justify-between items-center px-4">
-          <div className="text-black uppercase text-lg font-bold">
-            <h1 className="border border-black h-full flex items-center px-2">
-              Fake{" "}
-              <span className="text-blue-600">
-                <b className="bg-blue-700 text-white px-1">Store</b>
-              </span>
-            </h1>
-          </div>
-          <ul className="flex items-center gap-10 h-full text-center list-none">
-            <li>
-              <NavLink
-                exact
-                to="/"
-                className="text-xl active:underline text-blue-600 transition duration-300 hover:text-blue-800 hover:underline"
-                activeClassName="text-blue-800 underline translate-x-10"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/mycards"
-                className="text-xl text-blue-600 transition duration-300 hover:text-blue-800 hover:underline"
-                activeClassName="text-blue-800 underline translate-x-10"
-              >
-                My Cards
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/userinfo"
-                className="text-xl text-blue-600 transition duration-300 hover:text-blue-800 hover:underline"
-                activeClassName="text-blue-800 underline translate-x-10"
-              >
-                User Info
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-
+        {/* <----------------------Navbar ---------------------> */}
+        <Navbar />
         <Routes>
           <Route
             path="/"
