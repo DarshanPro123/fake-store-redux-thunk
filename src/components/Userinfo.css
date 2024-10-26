@@ -1,0 +1,41 @@
+/* ------------------------------for user ------------------------------- */
+.container-users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.user-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    width: 300px;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    background-color: #1c4b75;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.user-box:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-box h2 {
+    color: #ededed;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.user-box p {
+    color: #000000;
+    font-size: 1.1em;
+}
