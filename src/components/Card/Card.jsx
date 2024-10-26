@@ -1,6 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
+import { toast } from "react-toastify";
 
 const Card = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const handleCart = () => {
+    console.log(product);
+    dispatch(addToCart(product));
+    toast.success("Add Product sucessfully");
+  };
   return (
     <div
       key={product.id}
@@ -8,7 +18,7 @@ const Card = ({ product }) => {
     >
       <div className="flex flex-col h-full justify-between">
         <img
-          className="h-52 w-full object-contain mb-4"
+          className="h-48 w-full object-contain mb-4"
           src={product.image}
           alt={product.title}
         />
@@ -16,7 +26,10 @@ const Card = ({ product }) => {
         <p className="text-lg font-bold text-gray-700">
           ${Math.floor(product.price)}
         </p>
-        <button className="mt-4 w-full bg-gray-200 text-black text-sm font-medium border border-gray-950 py-2 rounded-sm hover:bg-gray-300 transition duration-300">
+        <button
+          onClick={handleCart}
+          className="mt-4 w-full bg-gray-200 text-black text-sm font-medium border border-gray-950 py-2 rounded-sm hover:bg-gray-300 transition duration-300"
+        >
           Add to Cart
         </button>
       </div>

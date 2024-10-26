@@ -11,6 +11,9 @@ import myimg from "../src/assets/love-happy.gif";
 import Userinfo from "./components/Userinfo.jsx";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Cart from "./components/Cart/Cart.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -41,8 +44,22 @@ const App = () => {
           />
           <Route path="/mycards" element={<MyCards />} />
           <Route path="/userinfo" element={<Userinfo />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
     </Router>
   );
 };
