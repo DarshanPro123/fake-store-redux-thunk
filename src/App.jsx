@@ -35,7 +35,7 @@ const App = () => {
                 <div className="homeis w-full bg-blue-50 py-4 text-center">
                   <h1 className="text-blue-600 text-2xl">
                     <Link to="/mycards" className="underline">
-                      Go to MY Cards👉
+                      Go to Store 🛒
                     </Link>
                   </h1>
                 </div>
@@ -49,7 +49,7 @@ const App = () => {
       </div>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

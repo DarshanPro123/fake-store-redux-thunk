@@ -6,9 +6,9 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const cartItems = useSelector((state) => state.cart.cart);
   return (
-    <nav className="bg-gray-800 h-16 flex justify-between items-center px-4">
+    <nav className="bg-gray-800 h-16 flex justify-between border-b-2 border-b-black items-center px-4">
       <div className="text-black uppercase text-lg font-bold">
-        <h1 className="border border-black h-full flex items-center px-2">
+        <h1 className="border border-black h-full flex items-center text-3xl">
           Fake{" "}
           <span className="text-blue-600">
             <b className="bg-blue-700 text-white px-1">Store</b>
@@ -30,7 +30,7 @@ const Navbar = () => {
             to="/mycards"
             className="text-xl text-blue-600 transition duration-300 hover:text-blue-800 hover:underline"
           >
-            My Cards
+            Store
           </NavLink>
         </li>
         <li>

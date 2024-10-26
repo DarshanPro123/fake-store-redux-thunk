@@ -2,6 +2,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, clearCart } from "../../store/cartSlice";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -9,10 +10,12 @@ const Cart = () => {
 
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
+    toast.error("Remove SucessFully");
   };
 
   const handleClearCart = () => {
     dispatch(clearCart());
+    toast.info("Clear all product from cart ");
   };
 
   return (
@@ -47,7 +50,7 @@ const Cart = () => {
                 </div>
                 <button
                   onClick={() => handleRemove(item.id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
                 >
                   Remove
                 </button>
@@ -57,9 +60,9 @@ const Cart = () => {
           <div className="mt-8 text-right">
             <button
               onClick={handleClearCart}
-              className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition duration-300"
+              className="bg-blue-500 text-white text-sm px-5 py-3 rounded-lg hover:bg-blue-600 transition duration-300"
             >
-              Clear Cart
+              Clear Cart 🛒
             </button>
           </div>
         </div>
